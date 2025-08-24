@@ -15,13 +15,17 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        .bg-gradient-to-br-green {
+            background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+            --tw-gradient-stops: #16a34a, #166534;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <div class="container mx-auto px-4 py-8">
         <!-- Hero Section -->
-        <header class="text-center py-16 bg-blue-700 text-white rounded-xl shadow-lg">
+        <header class="text-center py-16 bg-gradient-to-br-green text-white rounded-xl shadow-lg">
             <h1 id="hero-headline" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight"></h1>
             <p id="hero-subheadline" class="text-xl sm:text-2xl font-light max-w-2xl mx-auto"></p>
         </header>
@@ -37,7 +41,7 @@
             </section>
 
             <!-- Solution Section -->
-            <section class="bg-blue-600 text-white p-8 sm:p-12 rounded-xl shadow-lg">
+            <section class="bg-green-600 text-white p-8 sm:p-12 rounded-xl shadow-lg">
                 <div class="max-w-4xl mx-auto">
                     <h2 id="solution-title" class="text-3xl font-bold mb-4"></h2>
                     <p id="solution-body" class="text-lg leading-relaxed"></p>
@@ -89,24 +93,24 @@
     <script>
         // The JSON data is embedded directly for simplicity
         const websiteData = {
-          "pageTitle": "Stop Losing Time: Automate Your Roofing Business",
-          "metaDescription": "Is your business stuck in a cycle of admin work? Discover how to automate lead intake, quotes, and follow-ups so you can focus on building your business.",
+          "pageTitle": "Build a Business, Not Just a Job | AI for Roofers",
+          "metaDescription": "Are you a roofer stuck working in your business instead of on it? We provide a complete AI-powered system to automate your operations and unlock your business's true potential. Get a free, no-obligation business audit to see how.",
           "heroSection": {
-            "headline": "Tired of the Paperwork? Get Back on the Roof.",
-            "subheadline": "You got into roofing to build things, not to be stuck doing admin. Our AI assistant handles the chaos so you can focus on what you do best.",
+            "headline": "You Deserve to Build a Business, Not Just a Job.",
+            "subheadline": "Every roofer knows the feeling: endless admin, missed opportunities, and not enough time for what matters. This is your path to freedom.",
             "problemStatement": {
-              "title": "The Real Problem Isn't Finding Leads. It's Managing Them.",
-              "body": "It's a vicious cycle. You're busy on a job, and leads are coming in. You're too swamped to follow up immediately. Then, when you finally find time to get to the computer, you're buried in emails, phone messages, and disorganized notes. You spend late nights trying to catch up on quotes, paperwork, and scheduling. This isn't just inefficient; it's a major roadblock to growing your business."
+              "title": "The Old Way is Stealing Your Future",
+              "body": "Your passion is on the roof, but your reality is buried in paperwork, phone calls, and missed follow-ups. You're constantly playing catch-up, and every late night spent on quotes is a night you could be spending with your family or planning your next big project. This isn't just inefficient—it's holding you back from the business and life you dreamed of. The old-school hustle is keeping you from your goals, your family, and your financial freedom."
             },
             "solution": {
-              "title": "The AI Workflow: A Complete Solution",
-              "body": "This isn't just about a missed call. We're offering a full AI-powered workflow to transform your business. Our system doesn't just answer the phone; it qualifies leads, automatically gathers key information like project type and location, generates a preliminary quote, and sends a professional follow-up text to the customer. All this happens in real-time, giving you a full, organized dashboard of every single lead. You get to focus on the roofing, while the AI handles the office."
+              "title": "Unlock Your True Potential with AI",
+              "body": "Imagine a world where your business runs itself. Our AI-powered system takes over the entire sales workflow. It's not just an answering machine—it's a 24/7 assistant that captures and qualifies every lead, generates accurate preliminary quotes, and automatically nurtures every prospect with professional follow-ups. You get to focus on what you do best: building incredible roofs and a legacy for your family. This system puts you back in control, allowing you to grow your business without sacrificing your life."
             }
           },
           "offerSection": {
-            "title": "Your Next Step: A Free Business Audit",
-            "details": "We'll show you exactly how this system can work for your business. Book a free 15-minute consultation, and we'll analyze your current lead process and show you a custom plan to automate it. As a bonus, we'll create a free, professional business card design that you can use immediately to start generating more local leads.",
-            "ctaText": "Book Your Free Business Audit Now."
+            "title": "Your Next Step: A Free, Future-Proof Business Plan",
+            "details": "We're offering a free, no-obligation business audit to show you a customized plan to automate your operations. During this short call, we'll map out how our system can save you dozens of hours a week and help you scale faster. Plus, we'll create a free, professional business card design that you can use immediately to start attracting more high-value clients.",
+            "ctaText": "Unlock Your Free Business Plan"
           },
           "testimonials": [
             {
@@ -119,7 +123,7 @@
             }
           ],
           "footer": {
-            "contact": "Ready to streamline your business? Let's connect.",
+            "contact": "Ready to build the future you deserve?",
             "copyright": "© 2025 Lead Gen Pro for Roofers. All Rights Reserved."
           }
         };
