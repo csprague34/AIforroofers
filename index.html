@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    <meta name="description" id="meta-description" content="">
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/1e40af/ffffff?text=RF">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
+    <div class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <header class="text-center py-16 bg-blue-700 text-white rounded-xl shadow-lg">
+            <h1 id="hero-headline" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight"></h1>
+            <p id="hero-subheadline" class="text-xl sm:text-2xl font-light max-w-2xl mx-auto"></p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="mt-12 space-y-16">
+            <!-- Problem Section -->
+            <section class="bg-white p-8 sm:p-12 rounded-xl shadow-md">
+                <div class="max-w-4xl mx-auto">
+                    <h2 id="problem-title" class="text-3xl font-bold text-blue-800 mb-4"></h2>
+                    <p id="problem-body" class="text-lg text-gray-600 leading-relaxed"></p>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="bg-blue-600 text-white p-8 sm:p-12 rounded-xl shadow-lg">
+                <div class="max-w-4xl mx-auto">
+                    <h2 id="solution-title" class="text-3xl font-bold mb-4"></h2>
+                    <p id="solution-body" class="text-lg leading-relaxed"></p>
+                </div>
+            </section>
+
+            <!-- Offer Section -->
+            <section class="bg-white p-8 sm:p-12 rounded-xl shadow-md text-center">
+                <h2 id="offer-title" class="text-3xl font-bold text-blue-800 mb-4"></h2>
+                <p id="offer-details" class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto"></p>
+                <form id="lead-form" class="max-w-xl mx-auto space-y-4">
+                    <input type="text" name="name" placeholder="Your Name" required
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" name="email" placeholder="Your Email" required
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="tel" name="phone" placeholder="Your Phone Number" required
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <textarea name="message" placeholder="Tell us about your business" rows="4"
+                        class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    <button id="cta-button" type="submit"
+                        class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-md">
+                    </button>
+                    <p class="text-sm text-gray-500 mt-2">No strings attached. Your information is safe with us.</p>
+                </form>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div id="testimonial-1" class="bg-gray-200 p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4"></p>
+                    <p class="font-bold text-blue-800"></p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div id="testimonial-2" class="bg-gray-200 p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4"></p>
+                    <p class="font-bold text-blue-800"></p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-12 mt-12 text-gray-600">
+            <p id="footer-contact" class="text-lg mb-2"></p>
+            <p id="footer-copyright" class="text-sm"></p>
+        </footer>
+    </div>
+
+    <script>
+        // The JSON data is embedded directly for simplicity
+        const websiteData = {
+          "pageTitle": "Don't Miss Another Lead: Your 24/7 AI Receptionist is Here",
+          "metaDescription": "Are you a roofer losing jobs because you're stuck on a roof? We get it. Get a 24/7 AI assistant that handles every single call and lead, so you never miss a job again. Free consult + media.",
+          "heroSection": {
+            "headline": "Sick of Losing Leads While You're on the Roof?",
+            "subheadline": "The summer hustle is real. Your phone is ringing off the hook, but you can't be in two places at once. We've got the fix.",
+            "problemStatement": {
+              "title": "The Brutal Truth: Missed Calls = Missed Jobs",
+              "body": "Every small business owner knows they should be available 24/7 to intake new leads. But you're up there, laying shingles and leading the crew, not answering the phone. When you're in the truck, a lead calls, and you can't answer. You've just lost that job. A 'call me back' voicemail gets you nowhere. The old-school way of doing business is losing you money, and fast."
+            },
+            "solution": {
+              "title": "The Immediate Fix: An AI That Never Stops",
+              "body": "We solve this one problem, immediately. We'll set you up with an AI-powered phone assistant that answers every call, every time, 24/7. It's not a human—it's smarter. It asks qualifying questions, logs all the lead information (name, number, project type, square footage, address), and immediately sends an automated follow-up text or email. You get a text in real-time with the full lead details. So whether you're laying down new felt or in a supply run, every lead is captured, logged, and nurtured. No more 'I'll call them back later' stress. The AI gets the info, sets the follow-up, and keeps the lead warm for you."
+            }
+          },
+          "offerSection": {
+            "title": "A No-Brainer Offer: Free Consult + Media",
+            "details": "We're so confident we can fix your lead problem, we're giving you a free, no-strings-attached consultation to show you exactly how this AI works. And, as a bonus, we'll create a few pieces of free media for you—a professional testimonial video from a happy customer or a short social media post—to get your marketing off the ground. No catch, just a chance to prove what we can do.",
+            "ctaText": "Let's Talk Business. Claim Your Free Consult."
+          },
+          "testimonials": [
+            {
+              "name": "Mike from M&M Roofing",
+              "quote": "I was literally losing thousands of dollars a month in missed calls. I'm busy. The phone rings, I'm on a pitch. Now, the AI assistant catches everything. It's changed the game for me."
+            },
+            {
+              "name": "Sarah T., Homeowner",
+              "quote": "When I called to get a quote, I got a text back right away. The roofer followed up later that day with all my info on hand. It was so professional and quick. I chose them on the spot."
+            }
+          ],
+          "footer": {
+            "contact": "Ready to stop losing leads? Get in touch today.",
+            "copyright": "© 2025 Lead Gen Pro for Roofers. All Rights Reserved."
+          }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Populate document metadata
+            document.getElementById('page-title').textContent = websiteData.pageTitle;
+            document.getElementById('meta-description').setAttribute('content', websiteData.metaDescription);
+
+            // Populate hero section
+            document.getElementById('hero-headline').textContent = websiteData.heroSection.headline;
+            document.getElementById('hero-subheadline').textContent = websiteData.heroSection.subheadline;
+
+            // Populate problem and solution
+            document.getElementById('problem-title').textContent = websiteData.heroSection.problemStatement.title;
+            document.getElementById('problem-body').textContent = websiteData.heroSection.problemStatement.body;
+            document.getElementById('solution-title').textContent = websiteData.heroSection.solution.title;
+            document.getElementById('solution-body').textContent = websiteData.heroSection.solution.body;
+
+            // Populate offer section
+            document.getElementById('offer-title').textContent = websiteData.offerSection.title;
+            document.getElementById('offer-details').textContent = websiteData.offerSection.details;
+            document.getElementById('cta-button').textContent = websiteData.offerSection.ctaText;
+
+            // Populate testimonials
+            const testimonial1 = document.getElementById('testimonial-1');
+            testimonial1.querySelector('p:nth-child(1)').textContent = websiteData.testimonials[0].quote;
+            testimonial1.querySelector('p:nth-child(2)').textContent = `- ${websiteData.testimonials[0].name}`;
+
+            const testimonial2 = document.getElementById('testimonial-2');
+            testimonial2.querySelector('p:nth-child(1)').textContent = websiteData.testimonials[1].quote;
+            testimonial2.querySelector('p:nth-child(2)').textContent = `- ${websiteData.testimonials[1].name}`;
+
+            // Populate footer
+            document.getElementById('footer-contact').textContent = websiteData.footer.contact;
+            document.getElementById('footer-copyright').textContent = websiteData.footer.copyright;
+
+            // Form submission (placeholder)
+            const form = document.getElementById('lead-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const lead = {};
+                formData.forEach((value, key) => lead[key] = value);
+                
+                // IMPORTANT: This is a placeholder. You need to connect this to your
+                // lead management system or a service like Formspree or a Google Form.
+                console.log('Lead captured:', lead);
+                alert('Thank you for your submission! We will be in touch shortly.');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
