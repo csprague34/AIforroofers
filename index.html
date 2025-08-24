@@ -11,40 +11,106 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
         }
-        .bg-gradient-to-br-green {
-            background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-            --tw-gradient-stops: #16a34a, #166534;
+        .hero-bg {
+            background-image: url('https://placehold.co/1200x800/1a202c/ffffff?text=Modern+Roofer+with+Laptop');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        .animate-pulse-once {
+            animation: pulse 1.5s ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
     <div class="container mx-auto px-4 py-8">
+        <!-- Navigation/Logo -->
+        <nav class="flex justify-between items-center py-4">
+            <div class="flex items-center space-x-2">
+                <span class="text-3xl font-extrabold text-blue-700">RooferAI</span>
+            </div>
+            <!-- Future Nav Links Here -->
+        </nav>
+
         <!-- Hero Section -->
-        <header class="text-center py-16 bg-gradient-to-br-green text-white rounded-xl shadow-lg">
-            <h1 id="hero-headline" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight"></h1>
-            <p id="hero-subheadline" class="text-xl sm:text-2xl font-light max-w-2xl mx-auto"></p>
+        <header class="text-center py-20 rounded-xl shadow-lg relative overflow-hidden hero-bg">
+            <div class="hero-content text-white max-w-4xl mx-auto px-4">
+                <h1 id="hero-headline" class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4 leading-tight"></h1>
+                <p id="hero-subheadline" class="text-xl sm:text-2xl font-light max-w-2xl mx-auto"></p>
+            </div>
         </header>
 
         <!-- Main Content -->
-        <main class="mt-12 space-y-16">
+        <main class="mt-12 space-y-20">
             <!-- Problem Section -->
-            <section class="bg-white p-8 sm:p-12 rounded-xl shadow-md">
-                <div class="max-w-4xl mx-auto">
-                    <h2 id="problem-title" class="text-3xl font-bold text-blue-800 mb-4"></h2>
-                    <p id="problem-body" class="text-lg text-gray-600 leading-relaxed"></p>
+            <section class="bg-white p-8 sm:p-12 rounded-xl shadow-md text-center">
+                <h2 id="problem-title" class="text-3xl font-bold text-blue-800 mb-8"></h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <img src="https://placehold.co/150x150/fca5a5/ffffff?text=Missed+Calls" alt="Missed call icon" class="mx-auto rounded-full">
+                        <p id="pain-point-1" class="text-lg text-gray-600 font-medium"></p>
+                    </div>
+                    <div class="space-y-4">
+                        <img src="https://placehold.co/150x150/fca5a5/ffffff?text=Admin+Work" alt="Admin work icon" class="mx-auto rounded-full">
+                        <p id="pain-point-2" class="text-lg text-gray-600 font-medium"></p>
+                    </div>
+                    <div class="space-y-4">
+                        <img src="https://placehold.co/150x150/fca5a5/ffffff?text=Lost+Time" alt="Lost time icon" class="mx-auto rounded-full">
+                        <p id="pain-point-3" class="text-lg text-gray-600 font-medium"></p>
+                    </div>
                 </div>
             </section>
 
             <!-- Solution Section -->
-            <section class="bg-green-600 text-white p-8 sm:p-12 rounded-xl shadow-lg">
-                <div class="max-w-4xl mx-auto">
-                    <h2 id="solution-title" class="text-3xl font-bold mb-4"></h2>
-                    <p id="solution-body" class="text-lg leading-relaxed"></p>
+            <section class="bg-blue-800 text-white p-8 sm:p-12 rounded-xl shadow-lg text-center">
+                <h2 id="solution-title" class="text-3xl font-bold mb-4"></h2>
+                <p id="solution-body" class="text-xl leading-relaxed max-w-4xl mx-auto mb-8"></p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>24/7 Lead Capture</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Automated Follow-Up</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>Streamlined Workflows</span>
+                    </div>
                 </div>
             </section>
 
@@ -62,7 +128,7 @@
                     <textarea name="message" placeholder="Tell us about your business" rows="4"
                         class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                     <button id="cta-button" type="submit"
-                        class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-md">
+                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-md animate-pulse-once">
                     </button>
                     <p class="text-sm text-gray-500 mt-2">No strings attached. Your information is safe with us.</p>
                 </form>
@@ -93,23 +159,27 @@
     <script>
         // The JSON data is embedded directly for simplicity
         const websiteData = {
-          "pageTitle": "Build a Business, Not Just a Job | AI for Roofers",
-          "metaDescription": "Are you a roofer stuck working in your business instead of on it? We provide a complete AI-powered system to automate your operations and unlock your business's true potential. Get a free, no-obligation business audit to see how.",
+          "pageTitle": "From Overwhelmed to Overbooked | RooferAI",
+          "metaDescription": "Is your roofing business running you ragged? Discover how RooferAI automates your lead intake, follow-ups, and more, so you can focus on building a legacy, not just a job.",
           "heroSection": {
-            "headline": "You Deserve to Build a Business, Not Just a Job.",
-            "subheadline": "Every roofer knows the feeling: endless admin, missed opportunities, and not enough time for what matters. This is your path to freedom.",
-            "problemStatement": {
-              "title": "The Old Way is Stealing Your Future",
-              "body": "Your passion is on the roof, but your reality is buried in paperwork, phone calls, and missed follow-ups. You're constantly playing catch-up, and every late night spent on quotes is a night you could be spending with your family or planning your next big project. This isn't just inefficient—it's holding you back from the business and life you dreamed of. The old-school hustle is keeping you from your goals, your family, and your financial freedom."
-            },
-            "solution": {
-              "title": "Unlock Your True Potential with AI",
-              "body": "Imagine a world where your business runs itself. Our AI-powered system takes over the entire sales workflow. It's not just an answering machine—it's a 24/7 assistant that captures and qualifies every lead, generates accurate preliminary quotes, and automatically nurtures every prospect with professional follow-ups. You get to focus on what you do best: building incredible roofs and a legacy for your family. This system puts you back in control, allowing you to grow your business without sacrificing your life."
-            }
+            "headline": "Stop Working for Your Business.<br>Make Your Business Work for You.",
+            "subheadline": "The fastest-growing roofing companies aren't just working harder. They're working smarter. It's time to leverage AI to get your life back."
+          },
+          "problemStatement": {
+            "title": "The Reality of Running a Roofing Business",
+            "painPoints": [
+                "You're a roofer, not an office manager. Endless paperwork, missed calls, and late-night quotes are stealing your life.",
+                "Every missed call is a lost opportunity. Your phone rings on the job, but you can't answer. That lead goes straight to your competition.",
+                "You're stuck in a cycle of chaos. Chasing down leads, managing follow-ups, and trying to stay organized is keeping you from true growth."
+            ]
+          },
+          "solution": {
+            "title": "The RooferAI System: Your Path to Freedom",
+            "body": "Our AI-powered system doesn't just answer the phone. It's a comprehensive solution designed by and for roofers to handle the entire administrative load. It instantly qualifies leads, sends automated follow-up texts, and organizes all your customer data in one place. No more chaos. No more missed opportunities. Just pure, scalable growth."
           },
           "offerSection": {
-            "title": "Your Next Step: A Free, Future-Proof Business Plan",
-            "details": "We're offering a free, no-obligation business audit to show you a customized plan to automate your operations. During this short call, we'll map out how our system can save you dozens of hours a week and help you scale faster. Plus, we'll create a free, professional business card design that you can use immediately to start attracting more high-value clients.",
+            "title": "Ready to Stop the Chaos?",
+            "details": "We'll show you exactly how this system can work for your business. Book a free 15-minute consultation, and we'll analyze your current lead process and show you a custom plan to automate it. Plus, we'll create a free, professional business card design that you can use immediately to start attracting more high-value clients.",
             "ctaText": "Unlock Your Free Business Plan"
           },
           "testimonials": [
@@ -124,7 +194,7 @@
           ],
           "footer": {
             "contact": "Ready to build the future you deserve?",
-            "copyright": "© 2025 Lead Gen Pro for Roofers. All Rights Reserved."
+            "copyright": "© 2025 RooferAI. All Rights Reserved."
           }
         };
 
@@ -134,14 +204,23 @@
             document.getElementById('meta-description').setAttribute('content', websiteData.metaDescription);
 
             // Populate hero section
-            document.getElementById('hero-headline').textContent = websiteData.heroSection.headline;
+            document.getElementById('hero-headline').innerHTML = websiteData.heroSection.headline;
             document.getElementById('hero-subheadline').textContent = websiteData.heroSection.subheadline;
 
             // Populate problem and solution
-            document.getElementById('problem-title').textContent = websiteData.heroSection.problemStatement.title;
-            document.getElementById('problem-body').textContent = websiteData.heroSection.problemStatement.body;
-            document.getElementById('solution-title').textContent = websiteData.heroSection.solution.title;
-            document.getElementById('solution-body').textContent = websiteData.heroSection.solution.body;
+            document.getElementById('problem-title').textContent = websiteData.problemStatement.title;
+            
+            const painPoint1 = document.getElementById('pain-point-1');
+            painPoint1.textContent = websiteData.problemStatement.painPoints[0];
+            
+            const painPoint2 = document.getElementById('pain-point-2');
+            painPoint2.textContent = websiteData.problemStatement.painPoints[1];
+
+            const painPoint3 = document.getElementById('pain-point-3');
+            painPoint3.textContent = websiteData.problemStatement.painPoints[2];
+
+            document.getElementById('solution-title').textContent = websiteData.solution.title;
+            document.getElementById('solution-body').textContent = websiteData.solution.body;
 
             // Populate offer section
             document.getElementById('offer-title').textContent = websiteData.offerSection.title;
