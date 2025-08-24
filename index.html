@@ -14,9 +14,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Lighter background */
         }
         .hero-bg {
-            background-image: url('https://placehold.co/1200x800/1a202c/ffffff?text=Modern+Roofer+with+Laptop');
+            background-image: url('https://placehold.co/1200x800/1e3a8a/ffffff?text=Roofer+Working+on+Roof');
             background-size: cover;
             background-position: center;
             position: relative;
@@ -28,31 +29,36 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
             z-index: 1;
         }
         .hero-content {
             position: relative;
             z-index: 2;
         }
+        .pain-point-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .pain-point-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
         }
         .animate-pulse-once {
             animation: pulse 1.5s ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="text-gray-800">
 
-    <div class="container mx-auto px-4 py-8">
+    <div class="mx-auto">
         <!-- Navigation/Logo -->
-        <nav class="flex justify-between items-center py-4">
+        <nav class="flex justify-between items-center py-4 px-8">
             <div class="flex items-center space-x-2">
                 <span class="text-3xl font-extrabold text-blue-700">RooferAI</span>
             </div>
@@ -60,36 +66,50 @@
         </nav>
 
         <!-- Hero Section -->
-        <header class="text-center py-20 rounded-xl shadow-lg relative overflow-hidden hero-bg">
-            <div class="hero-content text-white max-w-4xl mx-auto px-4">
-                <h1 id="hero-headline" class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4 leading-tight"></h1>
-                <p id="hero-subheadline" class="text-xl sm:text-2xl font-light max-w-2xl mx-auto"></p>
+        <header class="text-center py-24 md:py-36 hero-bg">
+            <div class="hero-content text-white max-w-6xl mx-auto px-4">
+                <h1 id="hero-headline" class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight mb-4"></h1>
+                <p id="hero-subheadline" class="text-lg sm:text-2xl font-light max-w-3xl mx-auto mb-8"></p>
+                <button id="cta-button-hero"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse-once">
+                </button>
             </div>
         </header>
 
         <!-- Main Content -->
-        <main class="mt-12 space-y-20">
-            <!-- Problem Section -->
-            <section class="bg-white p-8 sm:p-12 rounded-xl shadow-md text-center">
-                <h2 id="problem-title" class="text-3xl font-bold text-blue-800 mb-8"></h2>
+        <main class="mt-12 space-y-20 container mx-auto px-4 py-8">
+            <!-- The Pain Section (New Section) -->
+            <section class="text-center">
+                <h2 id="pain-title" class="text-3xl font-bold text-gray-900 mb-4"></h2>
+                <p id="pain-sub-title" class="text-lg text-gray-600 max-w-3xl mx-auto mb-12"></p>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="space-y-4">
-                        <img src="https://placehold.co/150x150/fca5a5/ffffff?text=Missed+Calls" alt="Missed call icon" class="mx-auto rounded-full">
-                        <p id="pain-point-1" class="text-lg text-gray-600 font-medium"></p>
+                    <div id="pain-card-1" class="pain-point-card p-6 rounded-xl shadow-md space-y-4">
+                        <svg class="h-16 w-16 mx-auto text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold"></h3>
+                        <p class="text-base text-gray-500"></p>
                     </div>
-                    <div class="space-y-4">
-                        <img src="https://placehold.co/150x150/fca5a5/ffffff?text=Admin+Work" alt="Admin work icon" class="mx-auto rounded-full">
-                        <p id="pain-point-2" class="text-lg text-gray-600 font-medium"></p>
+                    <div id="pain-card-2" class="pain-point-card p-6 rounded-xl shadow-md space-y-4">
+                        <svg class="h-16 w-16 mx-auto text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h.01M17 11h.01M9 15h.01M15 15h.01M12 21v-4m-6 0h12a2 2 0 002-2V5a2 2 0 00-2-2H6a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold"></h3>
+                        <p class="text-base text-gray-500"></p>
                     </div>
-                    <div class="space-y-4">
-                        <img src="https://placehold.co/150x150/fca5a5/ffffff?text=Lost+Time" alt="Lost time icon" class="mx-auto rounded-full">
-                        <p id="pain-point-3" class="text-lg text-gray-600 font-medium"></p>
+                    <div id="pain-card-3" class="pain-point-card p-6 rounded-xl shadow-md space-y-4">
+                        <svg class="h-16 w-16 mx-auto text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.14 0-5.6 2.53-5.6 5.6s2.46 5.6 5.6 5.6 5.6-2.53 5.6-5.6-2.46-5.6-5.6-5.6zm0 0v-4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.36 5.64a9 9 0 010 12.72M5.64 5.64a9 9 0 000 12.72" />
+                        </svg>
+                        <h3 class="text-xl font-semibold"></h3>
+                        <p class="text-base text-gray-500"></p>
                     </div>
                 </div>
             </section>
 
-            <!-- Solution Section -->
-            <section class="bg-blue-800 text-white p-8 sm:p-12 rounded-xl shadow-lg text-center">
+            <!-- The Solution Section -->
+            <section class="bg-blue-700 text-white p-8 sm:p-12 rounded-xl shadow-lg text-center">
                 <h2 id="solution-title" class="text-3xl font-bold mb-4"></h2>
                 <p id="solution-body" class="text-xl leading-relaxed max-w-4xl mx-auto mb-8"></p>
                 <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
@@ -97,13 +117,13 @@
                         <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>24/7 Lead Capture</span>
+                        <span>Automated Lead Capture</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Automated Follow-Up</span>
+                        <span>Instant Follow-Ups</span>
                     </div>
                     <div class="flex items-center space-x-3">
                         <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,7 +134,19 @@
                 </div>
             </section>
 
-            <!-- Offer Section -->
+            <!-- Testimonials Section -->
+            <section class="grid md:grid-cols-2 gap-8">
+                <div id="testimonial-1" class="bg-white p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4"></p>
+                    <p class="font-bold text-blue-800"></p>
+                </div>
+                <div id="testimonial-2" class="bg-white p-8 rounded-xl shadow-md">
+                    <p class="text-lg italic text-gray-700 mb-4"></p>
+                    <p class="font-bold text-blue-800"></p>
+                </div>
+            </section>
+
+            <!-- CTA/Form Section -->
             <section class="bg-white p-8 sm:p-12 rounded-xl shadow-md text-center">
                 <h2 id="offer-title" class="text-3xl font-bold text-blue-800 mb-4"></h2>
                 <p id="offer-details" class="text-lg text-gray-600 mb-8 max-w-3xl mx-auto"></p>
@@ -128,24 +160,10 @@
                     <textarea name="message" placeholder="Tell us about your business" rows="4"
                         class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                     <button id="cta-button" type="submit"
-                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-md animate-pulse-once">
+                        class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-md">
                     </button>
                     <p class="text-sm text-gray-500 mt-2">No strings attached. Your information is safe with us.</p>
                 </form>
-            </section>
-
-            <!-- Testimonials Section -->
-            <section class="grid md:grid-cols-2 gap-8">
-                <!-- Testimonial 1 -->
-                <div id="testimonial-1" class="bg-gray-200 p-8 rounded-xl shadow-md">
-                    <p class="text-lg italic text-gray-700 mb-4"></p>
-                    <p class="font-bold text-blue-800"></p>
-                </div>
-                <!-- Testimonial 2 -->
-                <div id="testimonial-2" class="bg-gray-200 p-8 rounded-xl shadow-md">
-                    <p class="text-lg italic text-gray-700 mb-4"></p>
-                    <p class="font-bold text-blue-800"></p>
-                </div>
             </section>
         </main>
 
@@ -162,20 +180,30 @@
           "pageTitle": "From Overwhelmed to Overbooked | RooferAI",
           "metaDescription": "Is your roofing business running you ragged? Discover how RooferAI automates your lead intake, follow-ups, and more, so you can focus on building a legacy, not just a job.",
           "heroSection": {
-            "headline": "Stop Working for Your Business.<br>Make Your Business Work for You.",
-            "subheadline": "The fastest-growing roofing companies aren't just working harder. They're working smarter. It's time to leverage AI to get your life back."
+            "headline": "Stop Answering Phones, Start Building Your Legacy.",
+            "subheadline": "Your time is your most valuable asset. Our AI handles the grunt work, so you can focus on what truly matters: your craft, your family, and your future."
           },
-          "problemStatement": {
-            "title": "The Reality of Running a Roofing Business",
+          "painSection": {
+            "title": "The Daily Grind is Costing You More Than Money",
+            "subTitle": "Every minute spent on admin work is a minute you could be on the job, with your family, or scaling your business. This is the reality you face every day:",
             "painPoints": [
-                "You're a roofer, not an office manager. Endless paperwork, missed calls, and late-night quotes are stealing your life.",
-                "Every missed call is a lost opportunity. Your phone rings on the job, but you can't answer. That lead goes straight to your competition.",
-                "You're stuck in a cycle of chaos. Chasing down leads, managing follow-ups, and trying to stay organized is keeping you from true growth."
+                {
+                    "title": "Missed Opportunities",
+                    "body": "Your phone rings while you're on a roof. You can't answer. That potential client calls the next roofer on Google. That's a lost job and lost revenue."
+                },
+                {
+                    "title": "Administrative Chaos",
+                    "body": "Late-night quotes, disorganized messages, and endless paperwork. The office work is a second job that's draining your energy and your time."
+                },
+                {
+                    "title": "Stagnant Growth",
+                    "body": "You're trapped in a cycle of managing instead of growing. You can't take on more clients without burning out, keeping your business stuck."
+                }
             ]
           },
           "solution": {
-            "title": "The RooferAI System: Your Path to Freedom",
-            "body": "Our AI-powered system doesn't just answer the phone. It's a comprehensive solution designed by and for roofers to handle the entire administrative load. It instantly qualifies leads, sends automated follow-up texts, and organizes all your customer data in one place. No more chaos. No more missed opportunities. Just pure, scalable growth."
+            "title": "RooferAI: The Simple Solution to a Complex Problem",
+            "body": "Our system automates your entire lead intake and follow-up process. It’s built to be simple, effective, and to give you back your freedom. No more chasing leads or doing office work—just focus on what you love."
           },
           "offerSection": {
             "title": "Ready to Stop the Chaos?",
@@ -204,21 +232,27 @@
             document.getElementById('meta-description').setAttribute('content', websiteData.metaDescription);
 
             // Populate hero section
-            document.getElementById('hero-headline').innerHTML = websiteData.heroSection.headline;
+            document.getElementById('hero-headline').textContent = websiteData.heroSection.headline;
             document.getElementById('hero-subheadline').textContent = websiteData.heroSection.subheadline;
+            document.getElementById('cta-button-hero').textContent = websiteData.offerSection.ctaText;
 
-            // Populate problem and solution
-            document.getElementById('problem-title').textContent = websiteData.problemStatement.title;
+            // Populate the Pain section
+            document.getElementById('pain-title').textContent = websiteData.painSection.title;
+            document.getElementById('pain-sub-title').textContent = websiteData.painSection.subTitle;
             
-            const painPoint1 = document.getElementById('pain-point-1');
-            painPoint1.textContent = websiteData.problemStatement.painPoints[0];
+            const painCard1 = document.getElementById('pain-card-1');
+            painCard1.querySelector('h3').textContent = websiteData.painSection.painPoints[0].title;
+            painCard1.querySelector('p').textContent = websiteData.painSection.painPoints[0].body;
             
-            const painPoint2 = document.getElementById('pain-point-2');
-            painPoint2.textContent = websiteData.problemStatement.painPoints[1];
+            const painCard2 = document.getElementById('pain-card-2');
+            painCard2.querySelector('h3').textContent = websiteData.painSection.painPoints[1].title;
+            painCard2.querySelector('p').textContent = websiteData.painSection.painPoints[1].body;
 
-            const painPoint3 = document.getElementById('pain-point-3');
-            painPoint3.textContent = websiteData.problemStatement.painPoints[2];
+            const painCard3 = document.getElementById('pain-card-3');
+            painCard3.querySelector('h3').textContent = websiteData.painSection.painPoints[2].title;
+            painCard3.querySelector('p').textContent = websiteData.painSection.painPoints[2].body;
 
+            // Populate solution section
             document.getElementById('solution-title').textContent = websiteData.solution.title;
             document.getElementById('solution-body').textContent = websiteData.solution.body;
 
@@ -253,6 +287,12 @@
                 console.log('Lead captured:', lead);
                 alert('Thank you for your submission! We will be in touch shortly.');
                 form.reset();
+            });
+
+            // Smooth scroll to the form section when the hero button is clicked
+            document.getElementById('cta-button-hero').addEventListener('click', () => {
+                const formSection = document.getElementById('lead-form');
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
     </script>
